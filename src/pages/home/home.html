@@ -17,7 +17,7 @@
 <ion-card style="margin: 0; width: 100%;">
   <ion-slides loop="true" autoplay="3000" pager>
 
-    <ion-slide *ngFor="let number of [1,2,3,4]">
+    <ion-slide *ngFor="let number of [26,27,28,29,30]">
       <img src="./assets/images/{{number}}.jpg" />
     </ion-slide>
 
@@ -27,40 +27,34 @@
 <ion-grid>
   <ion-row>
     
-    <ion-col col-3>
-      <ion-card>
+    <ion-col col-4 no-padding>
+      <ion-card no-padding>
           <img src="./assets/images/smartphone.jpg" />
-      <ion-card-content>
-        <ion-card-title no-padding>
+      <ion-card-header>
       <p class="center">Smartphone</p>
-      </ion-card-title>
-      </ion-card-content>
+      </ion-card-header>
       </ion-card>
     </ion-col>
 
-    <ion-col col-3>
-        <ion-card>
+    <ion-col col-4 no-padding>
+        <ion-card no-padding>
             <img src="./assets/images/tv.jpg" />
-        <ion-card-content>
-          <ion-card-title no-padding>
+        <ion-card-header>
               <p class="center">TV's</p>
-         </ion-card-title>
-        </ion-card-content>
+        </ion-card-header>
         </ion-card>
       </ion-col>
 
-      <ion-col col-3>
-          <ion-card>
+      <ion-col col-4 no-padding>
+          <ion-card no-padding>
               <img src="./assets/images/laptop.jpg" />
-          <ion-card-content>
-            <ion-card-title no-padding>
+          <ion-card-header>
                 <p class="center">Laptops</p>
-           </ion-card-title>
-          </ion-card-content>
+          </ion-card-header>
           </ion-card>
         </ion-col>
 
-        <ion-col col-3>
+       <!-- <ion-col col-3>
             <ion-card>
                 <img src="./assets/images/gaming.jpg" />
             <ion-card-content>
@@ -70,12 +64,12 @@
             </ion-card-content>
             </ion-card>
             
-        </ion-col>
+        </ion-col>-->
   </ion-row>
 
   <ion-row>
     
-      <ion-col col-3>
+      <!--<ion-col col-4>
           <ion-card>
               <img src="./assets/images/tv.jpg" />
           <ion-card-content>
@@ -84,39 +78,33 @@
            </ion-card-title>
           </ion-card-content>
           </ion-card>
-      </ion-col>
+      </ion-col>-->
   
-      <ion-col col-3>
-          <ion-card>
+      <ion-col col-4 no-padding>
+          <ion-card no-padding>
               <img src="./assets/images/baby.jpg" />
-          <ion-card-content>
-            <ion-card-title no-padding>
+          <ion-card-header>
                 <p class="center">Baby</p>
-           </ion-card-title>
-          </ion-card-content>
+          </ion-card-header>
           </ion-card>
         </ion-col>
   
-        <ion-col col-3>
-            <ion-card>
+        <ion-col col-4 no-padding>
+            <ion-card no-padding>
                 <img src="./assets/images/menfashion.jpg" />
-            <ion-card-content>
-              <ion-card-title no-padding>
-                  <p class="center">Men's Fashion</p>
-             </ion-card-title>
-            </ion-card-content>
+            <ion-card-header>
+                  <p class="left">Men's Fashion</p>
+            </ion-card-header>
             </ion-card>
             
           </ion-col>
   
-          <ion-col col-3>
-              <ion-card>
+          <ion-col col-4 no-padding>
+              <ion-card no-padding>
                   <img src="./assets/images/womenfashion.jpg" />
-              <ion-card-content>
-                <ion-card-title no-padding>
-                    <p class="center">Women's Fashion</p>
-               </ion-card-title>
-              </ion-card-content>
+              <ion-card-header >
+                    <p class="left">Women's Fashion</p>
+              </ion-card-header>
               </ion-card>
           </ion-col>
     </ion-row>
@@ -137,7 +125,6 @@
       </ion-slides>
     </ion-row>
   </ion-grid>
-
 
   <ion-grid no-padding>
       <ion-row>

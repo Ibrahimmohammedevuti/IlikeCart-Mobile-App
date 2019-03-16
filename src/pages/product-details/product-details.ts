@@ -57,7 +57,7 @@ export class ProductDetails {
 
     //checking if user selected all the variation options or not
 
-    if(count_ != count || this.requireOptions)
+    /* if(count_ != count || this.requireOptions)
     {
       this.toastCtrl.create({
         message: "Select Product Options",
@@ -65,7 +65,7 @@ export class ProductDetails {
         showCloseButton: true
       }).present();
       return; 
-    }
+    }*/
 
 
 

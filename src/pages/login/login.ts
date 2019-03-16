@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController, Events } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
+import { SignupPage } from '../signup/signup';
 
 @IonicPage({})
 @Component({
@@ -65,7 +66,7 @@ export class Login {
 
     });
 
-
   }
+ 
 
 }

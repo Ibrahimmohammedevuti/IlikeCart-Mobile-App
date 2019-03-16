@@ -12,4 +12,75 @@
 
 <ion-content padding>
 
+  <ion-card style="margin: 0; width: 100%;">
+        <ion-slides loop="true" autoplay="3000" pager>
+      
+          <ion-slide *ngFor="let number of [10,11,12,13,14]">
+            <img src="./assets/images/{{number}}.jpg" />
+          </ion-slide>
+      
+        </ion-slides>
+      </ion-card>
+
+      <ion-grid style="margin:0px;">
+            <ion-row>
+              <ion-slides #productSlides>
+                <ion-slide *ngFor="let product of products">
+                  <ion-card no-padding>
+                    <img [src]="product.featured_src" />
+                    <h1 padding center> {{ product.title.substr(0, 50) + '...' }} </h1>
+                    <p center no-padding [innerHTML]="product.short_description"></p>
+                  </ion-card>
+                </ion-slide>
+              </ion-slides>
+            </ion-row>
+          </ion-grid> 
+
+          <img src="./assets/images/banner9.jpg" style="margin-top: 10px;"/>
+
+          <ion-grid no-padding>
+              <ion-row>
+                  <ion-col no-padding col-6 col-md-3 *ngFor="let product of moreProducts" text-wrap (click)="openProductPage(product)">
+                      <ion-card>
+                          <img [src]="product.featured_src" height="150px" width="60px"/>
+                          <ion-card-content>
+                              <ion-card-title no-padding >
+                                {{ product.title.substr(0, 45) + '...' }}
+                              </ion-card-title>
+                              <ion-row no-padding class="center">
+                                  <ion-col>
+                                      <p>
+                                          <!--<span [innerHTML]="product.short_description.substr(0, 50) + '...'"></span>-->
+                                          <span [innerHTML]="product.price_html"></span>
+                                        </p>
+                                  </ion-col>
+                                </ion-row>
+                                </ion-card-content>
+                              </ion-card>
+                  </ion-col>
+              </ion-row>
+        
+          </ion-grid>
+
+             <!-- <ion-item *ngFor="let product of moreProducts" text-wrap (click)="openProductPage(product)">
+                <ion-thumbnail item-left>
+                  <img [src]="product.featured_src" />
+                </ion-thumbnail>
+          
+                <h2> {{ product.title }} </h2>
+          
+                <p>
+                  <span [innerHTML]="product.short_description.substr(0, 50) + '...'"></span>
+                  <span [innerHTML]="product.price_html"></span>
+                </p>
+          
+                <button ion-button icon clear item-right>
+                  <ion-icon name="arrow-forward"></ion-icon>
+                </button>
+              </ion-item>-->
+
+            <ion-infinite-scroll (ionInfinite)="loadMoreProducts($event)">
+                <ion-infinite-scroll-content></ion-infinite-scroll-content>
+              </ion-infinite-scroll>
+
 </ion-content>

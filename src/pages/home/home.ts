@@ -17,6 +17,7 @@ export class HomePage {
   WooCommerce: any;
   products: any[];
   moreProducts: any[];
+  //watchproducts: any[];
   page: number;
   searchQuery: string = "";
 
