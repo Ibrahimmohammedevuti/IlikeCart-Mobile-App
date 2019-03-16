@@ -1,18 +1,192 @@
 <ion-header>
+
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
   </ion-navbar>
+
+  <ion-toolbar color="warning">
+      <ion-searchbar [(ngModel)]="searchQuery" (search)="onSearch($event)"></ion-searchbar>
+    </ion-toolbar>
+
 </ion-header>
-
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+<ion-card style="margin: 0; width: 100%;">
+  <ion-slides loop="true" autoplay="3000" pager>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-slide *ngFor="let number of [1,2,3,4]">
+      <img src="./assets/images/{{number}}.jpg" />
+    </ion-slide>
+
+  </ion-slides>
+</ion-card>
+<h3 class="center">Top Categories</h3>
+<ion-grid>
+  <ion-row>
+    
+    <ion-col col-3>
+      <ion-card>
+          <img src="./assets/images/smartphone.jpg" />
+      <ion-card-content>
+        <ion-card-title no-padding>
+      <p class="center">Smartphone</p>
+      </ion-card-title>
+      </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col col-3>
+        <ion-card>
+            <img src="./assets/images/tv.jpg" />
+        <ion-card-content>
+          <ion-card-title no-padding>
+              <p class="center">TV's</p>
+         </ion-card-title>
+        </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-3>
+          <ion-card>
+              <img src="./assets/images/laptop.jpg" />
+          <ion-card-content>
+            <ion-card-title no-padding>
+                <p class="center">Laptops</p>
+           </ion-card-title>
+          </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col col-3>
+            <ion-card>
+                <img src="./assets/images/gaming.jpg" />
+            <ion-card-content>
+              <ion-card-title no-padding>
+                  <p class="center">Gaming</p>
+             </ion-card-title>
+            </ion-card-content>
+            </ion-card>
+            
+        </ion-col>
+  </ion-row>
+
+  <ion-row>
+    
+      <ion-col col-3>
+          <ion-card>
+              <img src="./assets/images/tv.jpg" />
+          <ion-card-content>
+            <ion-card-title no-padding>
+                <p class="center">Electronic</p>
+           </ion-card-title>
+          </ion-card-content>
+          </ion-card>
+      </ion-col>
+  
+      <ion-col col-3>
+          <ion-card>
+              <img src="./assets/images/baby.jpg" />
+          <ion-card-content>
+            <ion-card-title no-padding>
+                <p class="center">Baby</p>
+           </ion-card-title>
+          </ion-card-content>
+          </ion-card>
+        </ion-col>
+  
+        <ion-col col-3>
+            <ion-card>
+                <img src="./assets/images/menfashion.jpg" />
+            <ion-card-content>
+              <ion-card-title no-padding>
+                  <p class="center">Men's Fashion</p>
+             </ion-card-title>
+            </ion-card-content>
+            </ion-card>
+            
+          </ion-col>
+  
+          <ion-col col-3>
+              <ion-card>
+                  <img src="./assets/images/womenfashion.jpg" />
+              <ion-card-content>
+                <ion-card-title no-padding>
+                    <p class="center">Women's Fashion</p>
+               </ion-card-title>
+              </ion-card-content>
+              </ion-card>
+          </ion-col>
+    </ion-row>
+</ion-grid>
+
+<img src="./assets/images/banner.jpg" style="margin-top: 10px;"/>
+
+<ion-grid>
+    <ion-row>
+      <ion-slides #productSlides>
+        <ion-slide *ngFor="let product of products">
+          <ion-card no-padding>
+            <img [src]="product.featured_src" />
+            <h1 padding center> {{ product.title }} </h1>
+            <p center padding [innerHTML]="product.short_description"></p>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid no-padding>
+      <ion-row>
+          <ion-col no-padding col-6 col-md-3 *ngFor="let product of moreProducts" text-wrap (click)="openProductPage(product)">
+              <ion-card>
+                  <img [src]="product.featured_src" height="150px" width="30px"/>
+                  <ion-card-content>
+                      <ion-card-title no-padding >
+                        {{ product.title.substr(0, 45) + '...' }}
+                      </ion-card-title>
+                      <ion-row no-padding class="center">
+                          <ion-col>
+                              <p>
+                                  <!--<span [innerHTML]="product.short_description.substr(0, 50) + '...'"></span>-->
+                                  <span [innerHTML]="product.price_html"></span>
+                                </p>
+                          </ion-col>
+                        </ion-row>
+                        </ion-card-content>
+                      </ion-card>
+          </ion-col>
+      </ion-row>
+
+  </ion-grid>
+
+
+
+
+  <!--<ion-list>
+      <ion-item *ngFor="let product of moreProducts" text-wrap (click)="openProductPage(product)">
+        <ion-thumbnail item-left>
+          <img [src]="product.featured_src" />
+        </ion-thumbnail>
+  
+        <h2> {{ product.title }} </h2>
+  
+        <p>
+          <span [innerHTML]="product.short_description.substr(0, 50) + '...'"></span>
+          <span [innerHTML]="product.price_html"></span>
+        </p>
+  
+        <button ion-button icon clear item-right>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>-->
+  
+<ion-infinite-scroll (ionInfinite)="loadMoreProducts($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
 </ion-content>

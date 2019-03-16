@@ -5,14 +5,99 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <ion-content class="card-background-page">
+      <ion-card>
+          <img src="./assets/images/rock.png" />
+          <div class="card-title">iLikeCart</div>
+          <div class="card-subtitle">Keep Shopping</div>
+        </ion-card>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          {{p.title}}
+            </button>
+       <ion-item-group>
+      <ion-item-divider color="light">
+        PHONES & TABLETS
+      </ion-item-divider>
+            <ion-item no-lines (click)="openSmartphonesPage()"><ion-icon name="phone-portrait-outline" style="margin-right: 4px;"></ion-icon>SmartPhones</ion-item>
+            <ion-item no-lines (click)="openTabletsPage(TabletsPage)"><ion-icon name="md-phone-portrait" style="margin-right: 4px;"></ion-icon>Tablets</ion-item>
+            <ion-item no-lines (click)="openMobileAccessoriesPage(MobileAccessoriesPage)"><ion-icon name="bluetooth" style="margin-right: 4px;"></ion-icon>Accessories</ion-item>
+       </ion-item-group>
+       <ion-item-group>
+        <ion-item-divider color="light">
+            COMPUTING
+        </ion-item-divider>
+             <ion-item no-lines (click)="goToLaptopPage()"><ion-icon name="laptop" style="margin-right: 4px;"></ion-icon>Laptops</ion-item>
+             <ion-item no-lines (click)="goToDesktopPage()"><ion-icon name="desktop" style="margin-right: 4px;"></ion-icon>Desktops</ion-item>
+             <ion-item no-lines (click)="goToComputerAccessoriesPage()"><ion-icon name="wifi" style="margin-right: 4px;"></ion-icon>Computer Accessories</ion-item> -->
+      </ion-item-group>
+
+    <ion-item-group>
+          <ion-item-divider color="light">
+          ELECTRONICS
+          </ion-item-divider>
+          <ion-item no-lines (click)="pushTelevisionPage()"><ion-icon name="tv" style="margin-right: 4px;"></ion-icon>Television & Video</ion-item>
+          <ion-item no-lines (click)="pushHomeAudioPage()"><ion-icon name="megaphone" style="margin-right: 4px;"></ion-icon>Home Audio</ion-item>
+          <ion-item no-lines (click)="pushCameraPage()"><ion-icon name="camera" style="margin-right: 4px;"></ion-icon>Camera & Photo </ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+          <ion-item-divider color="light">
+          HOME & OFFICE
+        </ion-item-divider>
+          <ion-item no-lines (click)="tapHomeOfficeAppliancesPage()"><ion-icon name="radio" style="margin-right: 4px;"></ion-icon>Appliances</ion-item>
+          <ion-item no-lines (click)="tapHomeFurniturePage()"><ion-icon name="bed" style="margin-right: 4px;"></ion-icon>Home & Furniture</ion-item>
+          <ion-item no-lines (click)="tapHomeKitchenPage()"><ion-icon name="restaurant" style="margin-right: 4px;"></ion-icon>Home & Kitchen </ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+          <ion-item-divider color="light">
+       BEAUTY & PERSONAL CARE
+          </ion-item-divider>
+          <ion-item no-lines (click)="pullPerfumePage()"><ion-icon name="flask" style="margin-right: 4px;"></ion-icon>Perfumes</ion-item>
+          <ion-item no-lines  (click)="pullCosmeticsPage()"><ion-icon name="rose" style="margin-right: 4px;"></ion-icon>Cosmetics</ion-item>
+          <ion-item no-lines (click)="pullHairCarePage()"><ion-icon name="color-wand" style="margin-right: 4px;"></ion-icon>Hair Care</ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+          <ion-item-divider color="light">
+            GAMING
+          </ion-item-divider>
+          <ion-item no-lines (click)="popPlaystationPage()"><ion-icon name="logo-game-controller-b" style="margin-right: 4px;"></ion-icon>Playstation</ion-item>
+          <ion-item no-lines (click)="popXboxPage()"><ion-icon name="logo-game-controller-a" style="margin-right: 4px;"></ion-icon>XBOX</ion-item>
+          <ion-item no-lines (click)="popGamingPcPage()"><ion-icon name="laptop" style="margin-right: 4px;"></ion-icon>Gaming PC</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item-divider color="light"> 
+            BABY & TOYS
+          </ion-item-divider>
+          <ion-item no-lines (click)="NavPushOutdoorToysPage()"><ion-icon name="baseball" style="margin-right: 4px;"></ion-icon>Outdoor Toys</ion-item>
+          <ion-item no-lines (click)="NavPushIndoorToysPage()"><ion-icon name="logo-tux" style="margin-right: 4px;"></ion-icon>Indoor Toys</ion-item>
+          <ion-item no-lines (click)="NavPushRfToysPage()">RF Toys</ion-item>
+          <ion-item no-lines (click)="NavPushFeedingAccessoriesPage()"><ion-icon name="restaurant" style="margin-right: 4px;"></ion-icon>Feeding Accessories</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item-divider color="light"> 
+           MEN'S FASHION
+           </ion-item-divider>
+          <ion-item no-lines (click)="NavPullMenClothingPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Clothings</ion-item>
+          <ion-item no-lines (click)="NavPullMenShoesPage()"><ion-icon name="paw" style="margin-right: 4px;"></ion-icon>Shoes</ion-item>
+          <ion-item no-lines (click)="NavPullMenWatchesPage()"><ion-icon name="watch" style="margin-right: 4px;"></ion-icon>Watches</ion-item>
+          <ion-item no-lines (click)="NavPullMenBagsPage()"><ion-icon name="briefcase" style="margin-right: 4px;"></ion-icon>Bags</ion-item>
+          <ion-item no-lines (click)="NavPullMenWalletPage()"><ion-icon name="archive" style="margin-right: 4px;"></ion-icon>Wallets</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item-divider color="light"> 
+           WOMEN'S FASHION
+           </ion-item-divider>
+          <ion-item no-lines (click)="getWomenClothingPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Clothing</ion-item>
+          <ion-item no-lines (click)="getWomenShoesPage()"><ion-icon name="paw" style="margin-right: 4px;"></ion-icon>Shoes & Footwear</ion-item>
+          <ion-item no-lines (click)="getWomenWatchesPage()"><ion-icon name="watch" style="margin-right: 4px;"></ion-icon>Watch</ion-item>
+          <ion-item no-lines (click)="getWomenBagsPage()"><ion-icon name="briefcase" style="margin-right: 4px;"></ion-icon>Handbags & Wallets</ion-item>
+          <ion-item no-lines (click)="getJewelryPage()"><ion-icon name="medal" style="margin-right: 4px;"></ion-icon>Jewelry</ion-item>
+      </ion-item-group>
     </ion-list>
   </ion-content>
-
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
