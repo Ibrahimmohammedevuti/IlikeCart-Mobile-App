@@ -1,10 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Slides, ToastController } from 'ionic-angular';
 import { ProductDetails } from '../product-details/product-details';
-// import { SearchPage } from "../search/search";
+import { SearchPage } from "../search/search";
 
 
 import { WoocommerceProvider } from "../../providers/woocommerce/woocommerce"
+import { SmartphonesPage } from '../smartphones/smartphones';
+import { TelevisionPage } from '../television/television';
+import { LaptopPage } from '../laptop/laptop';
+import { NewPage } from '../new/new';
+import { WomenClothingPage } from '../women-clothing/women-clothing';
+import { MenClothingPage } from '../men-clothing/men-clothing';
 //import * as WC from 'woocommerce-api';
 
 
@@ -91,8 +97,40 @@ export class HomePage {
 
   onSearch(event){
     if(this.searchQuery.length > 0){
-      this.navCtrl.push('SearchPage', {"searchQuery": this.searchQuery});
+      this.navCtrl.push( SearchPage, {"searchQuery": this.searchQuery});
     }
   }
+
+  openSmartPhone(){
+
+      this.navCtrl.push(SmartphonesPage);
+    }
+
+    opentv(){
+
+      this.navCtrl.push(TelevisionPage);
+    }
+
+    openlaptops(){
+
+      this.navCtrl.push(LaptopPage);
+    }
+
+    openKidFashion(){
+
+      this.navCtrl.push(NewPage);
+    }
+
+
+    openmenfashion(){
+
+      this.navCtrl.push(MenClothingPage);
+    }
+
+    openwomenfashion(){
+
+      this.navCtrl.push(WomenClothingPage);
+    }
+
 
 }

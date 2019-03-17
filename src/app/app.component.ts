@@ -35,7 +35,7 @@ import { PlaystationPage } from '../pages/playstation/playstation';
 import { ProductDetails } from '../pages/product-details/product-details';
 import { RfToysPage } from '../pages/rf-toys/rf-toys';
 //import { SearchPage } from '../pages/search/search';
-//import { SignupPage } from '../pages/signup/signup';
+import { SignupPage } from '../pages/signup/signup';
 import { SmartphonesPage } from '../pages/smartphones/smartphones';
 import { TabletsPage } from '../pages/tablets/tablets';
 import { TelevisionPage } from '../pages/television/television';
@@ -44,6 +44,12 @@ import { WomenClothingPage } from '../pages/women-clothing/women-clothing';
 import { WomenShoesPage } from '../pages/women-shoes/women-shoes';
 import { WomenWatchesPage } from '../pages/women-watches/women-watches';
 import { XboxPage } from '../pages/xbox/xbox';
+import { GirlClothing } from '../pages/girl-kid-clothing/girl-kid-clothing'
+import { GirlShoes } from '../pages/girl-kid-shoes/girl-kid-shoes'
+import { BoyClothing } from '../pages/boy-kid-clothing/boy-kid-clothing'
+import { BoyShoes } from '../pages/boy-kid-shoes/boy-kid-shoes'
+import { BabyBoyClothing } from '../pages/baby-boy-clothing/baby-boy-clothing'
+import { BabyGirlClothing } from '../pages/baby-girl-clothing/baby-girl-clothing'
 
 
 @Component({
@@ -272,5 +278,43 @@ openSmartphonesPage() {
    getJewelryPage() {
 
     this.nav.push(JewelryPage);
+   }
+
+   goboykidClothingPage() {
+
+    this.nav.push( BoyClothing );
+   }
+
+   gogirlkidClothingPage() {
+
+    this.nav.push(GirlClothing);
+   }
+
+   goboykidShoesPage() {
+
+    this.nav.push(BoyShoes);
+   }
+
+
+   gogirlkidShoesPage() {
+
+    this.nav.push(GirlShoes);
+   }
+
+
+   getSignupPage() {
+
+    this.nav.push(SignupPage);
+   }
+
+   NavPushBabyBoyPage() {
+
+    this.nav.push(BabyBoyClothing);
+   }
+
+   
+   NavPushBabyGirlPage() {
+
+    this.nav.push( BabyGirlClothing );
    }
 }

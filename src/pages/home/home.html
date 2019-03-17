@@ -2,16 +2,17 @@
 
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon name="menu" style="color: black;"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title style="background-color: yellow;"> <h2 style="color: black;"><img src="../../assets/images/logo.jpg">Home</h2></ion-title>
   </ion-navbar>
 
-  <ion-toolbar color="warning">
-      <ion-searchbar [(ngModel)]="searchQuery" (search)="onSearch($event)"></ion-searchbar>
+  <ion-toolbar style="background-color: #d4af37; color: white;">
+      <ion-searchbar [(ngModel)]="searchQuery" (search)="onSearch($event)" style="background-color: yellow; color: white;"></ion-searchbar>
     </ion-toolbar>
 
 </ion-header>
+
 <ion-content padding>
 
 <ion-card style="margin: 0; width: 100%;">
@@ -28,7 +29,7 @@
   <ion-row>
     
     <ion-col col-4 no-padding>
-      <ion-card no-padding>
+      <ion-card no-padding (click)="openSmartPhone()">
           <img src="./assets/images/smartphone.jpg" />
       <ion-card-header>
       <p class="center">Smartphone</p>
@@ -37,7 +38,7 @@
     </ion-col>
 
     <ion-col col-4 no-padding>
-        <ion-card no-padding>
+        <ion-card no-padding (click)="opentv()">
             <img src="./assets/images/tv.jpg" />
         <ion-card-header>
               <p class="center">TV's</p>
@@ -46,7 +47,7 @@
       </ion-col>
 
       <ion-col col-4 no-padding>
-          <ion-card no-padding>
+          <ion-card no-padding (click)="openlaptops()">
               <img src="./assets/images/laptop.jpg" />
           <ion-card-header>
                 <p class="center">Laptops</p>
@@ -81,29 +82,29 @@
       </ion-col>-->
   
       <ion-col col-4 no-padding>
-          <ion-card no-padding>
+          <ion-card no-padding (click)="openKidFashion()">
               <img src="./assets/images/baby.jpg" />
           <ion-card-header>
-                <p class="center">Baby</p>
+                <p class="center">Kid's<br/> Fashion</p>
           </ion-card-header>
           </ion-card>
         </ion-col>
   
         <ion-col col-4 no-padding>
-            <ion-card no-padding>
+            <ion-card no-padding (click)="openmenfashion()">
                 <img src="./assets/images/menfashion.jpg" />
             <ion-card-header>
-                  <p class="left">Men's Fashion</p>
+                  <p class="left" text-left >Men's <br/> Fashion</p>
             </ion-card-header>
             </ion-card>
             
           </ion-col>
   
           <ion-col col-4 no-padding>
-              <ion-card no-padding>
+              <ion-card no-padding (click)="openwomenfashion()">
                   <img src="./assets/images/womenfashion.jpg" />
               <ion-card-header >
-                    <p class="left">Women's Fashion</p>
+                    <p class="left" text-left >Women's <br/> Fashion</p>
               </ion-card-header>
               </ion-card>
           </ion-col>

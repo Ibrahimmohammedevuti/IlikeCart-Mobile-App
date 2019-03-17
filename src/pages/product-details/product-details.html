@@ -1,7 +1,7 @@
 <ion-header>
 
     <ion-navbar>
-      <ion-title> {{ product.title }} </ion-title>
+      <ion-title style="background-color: yellow; color: black;"> {{ product.title }} </ion-title>
     </ion-navbar>
   
   </ion-header>
@@ -10,7 +10,7 @@
   <ion-content>
   
     <ion-fab right top edge (click)="openCart()">
-      <button ion-fab color="danger"><ion-icon name="cart"></ion-icon></button>
+      <button ion-fab style="background-color: black; color: white;"><ion-icon name="cart"></ion-icon></button>
     </ion-fab>
   
     <ion-card>
@@ -107,7 +107,7 @@
   
   <ion-footer>
     <ion-toolbar>
-      <button ion-button icon-left block outline color="danger" (click)="addToCart(product)">
+      <button ion-button icon-left block outline style="background-color: yellow; color: black;" (click)="addToCart(product)">
         <ion-icon name="basket"></ion-icon> {{ requireOptions ? 'Select Product Options' : 'Add to Cart for ' + '$' + ' ' + productPrice}}
       </button>
     </ion-toolbar>

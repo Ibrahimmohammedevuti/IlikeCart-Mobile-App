@@ -51,10 +51,17 @@ import { WomenClothingPage } from '../pages/women-clothing/women-clothing';
 import { WomenShoesPage } from '../pages/women-shoes/women-shoes';
 import { WomenWatchesPage } from '../pages/women-watches/women-watches';
 import { XboxPage } from '../pages/xbox/xbox';
+import { GirlClothing } from '../pages/girl-kid-clothing/girl-kid-clothing'
+import { GirlShoes } from '../pages/girl-kid-shoes/girl-kid-shoes'
+import { BoyClothing } from '../pages/boy-kid-clothing/boy-kid-clothing'
+import { BoyShoes } from '../pages/boy-kid-shoes/boy-kid-shoes'
+import { BabyBoyClothing } from '../pages/baby-boy-clothing/baby-boy-clothing'
+import { BabyGirlClothing } from '../pages/baby-girl-clothing/baby-girl-clothing'
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+//import { BoyKidClothingPage } from '../pages/boy-kid-clothing/boy-kid-clothing';
 //import { WoocommerceProvider } from '../providers/woocommerce/woocommerce';
 
 @NgModule({
@@ -62,6 +69,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
    // ListPage,
+    BabyBoyClothing,
+    BabyGirlClothing,
+    BoyClothing,
+    BoyShoes,
     CameraPage,
     Checkout,
     Cart,
@@ -70,6 +81,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DesktopPage,
     FeedingAccessoriesPage,
     GamingPcPage,
+    GirlShoes,
+    GirlClothing,
     HairCarePage,
     HomeAudioPage,
     HomeFurniturePage,
@@ -113,6 +126,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     //ListPage,
+    BabyBoyClothing,
+    BabyGirlClothing,
+    BoyClothing,
+    BoyShoes,
     CameraPage,
     Checkout,
     Cart,
@@ -121,6 +138,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DesktopPage,
     FeedingAccessoriesPage,
     GamingPcPage,
+    GirlShoes,
+    GirlClothing,
     HairCarePage,
     HomeAudioPage,
     HomeFurniturePage,

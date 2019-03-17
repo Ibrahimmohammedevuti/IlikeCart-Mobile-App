@@ -1,7 +1,7 @@
 <ion-menu [content]="content">
-  <ion-header>
+  <ion-header >
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+      <ion-title style="background-color: yellow;" > <h4 style="color:black;">Categories </h4></ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -16,7 +16,7 @@
           {{p.title}}
             </button>
        <ion-item-group>
-      <ion-item-divider color="light">
+      <ion-item-divider  style="background-color: yellow; color: black;">
         PHONES & TABLETS
       </ion-item-divider>
             <ion-item no-lines (click)="openSmartphonesPage()"><ion-icon name="phone-portrait-outline" style="margin-right: 4px;"></ion-icon>SmartPhones</ion-item>
@@ -24,7 +24,7 @@
             <ion-item no-lines (click)="openMobileAccessoriesPage(MobileAccessoriesPage)"><ion-icon name="bluetooth" style="margin-right: 4px;"></ion-icon>Accessories</ion-item>
        </ion-item-group>
        <ion-item-group>
-        <ion-item-divider color="light">
+        <ion-item-divider style="background-color: yellow; color: black;">
             COMPUTING
         </ion-item-divider>
              <ion-item no-lines (click)="goToLaptopPage()"><ion-icon name="laptop" style="margin-right: 4px;"></ion-icon>Laptops</ion-item>
@@ -33,7 +33,7 @@
       </ion-item-group>
 
     <ion-item-group>
-          <ion-item-divider color="light">
+          <ion-item-divider style="background-color: yellow; color: black">
           ELECTRONICS
           </ion-item-divider>
           <ion-item no-lines (click)="pushTelevisionPage()"><ion-icon name="tv" style="margin-right: 4px;"></ion-icon>Television & Video</ion-item>
@@ -42,7 +42,7 @@
       </ion-item-group>
 
       <ion-item-group>
-          <ion-item-divider color="light">
+          <ion-item-divider style="background-color: yellow; color: black">
           HOME & OFFICE
         </ion-item-divider>
           <ion-item no-lines (click)="tapHomeOfficeAppliancesPage()"><ion-icon name="radio" style="margin-right: 4px;"></ion-icon>Appliances</ion-item>
@@ -51,7 +51,7 @@
       </ion-item-group>
 
       <ion-item-group>
-          <ion-item-divider color="light">
+          <ion-item-divider style="background-color: yellow; color: black;">
        BEAUTY & PERSONAL CARE
           </ion-item-divider>
           <ion-item no-lines (click)="pullPerfumePage()"><ion-icon name="flask" style="margin-right: 4px;"></ion-icon>Perfumes</ion-item>
@@ -60,7 +60,7 @@
       </ion-item-group>
 
       <ion-item-group>
-          <ion-item-divider color="light">
+          <ion-item-divider style="background-color: yellow; color: black">
             GAMING
           </ion-item-divider>
           <ion-item no-lines (click)="popPlaystationPage()"><ion-icon name="logo-game-controller-b" style="margin-right: 4px;"></ion-icon>Playstation</ion-item>
@@ -68,16 +68,18 @@
           <ion-item no-lines (click)="popGamingPcPage()"><ion-icon name="laptop" style="margin-right: 4px;"></ion-icon>Gaming PC</ion-item>
       </ion-item-group>
       <ion-item-group>
-          <ion-item-divider color="light"> 
+          <ion-item-divider style="background-color: yellow; color: black"> 
             BABY & TOYS
           </ion-item-divider>
+          <ion-item no-lines (click)="NavPushbabyboyPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Boy Clothing</ion-item>
+          <ion-item no-lines (click)="NavPushbabygirlPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Girl Clothing</ion-item>
           <ion-item no-lines (click)="NavPushOutdoorToysPage()"><ion-icon name="baseball" style="margin-right: 4px;"></ion-icon>Outdoor Toys</ion-item>
           <ion-item no-lines (click)="NavPushIndoorToysPage()"><ion-icon name="logo-tux" style="margin-right: 4px;"></ion-icon>Indoor Toys</ion-item>
           <ion-item no-lines (click)="NavPushRfToysPage()">RF Toys</ion-item>
           <ion-item no-lines (click)="NavPushFeedingAccessoriesPage()"><ion-icon name="restaurant" style="margin-right: 4px;"></ion-icon>Feeding Accessories</ion-item>
       </ion-item-group>
       <ion-item-group>
-          <ion-item-divider color="light"> 
+          <ion-item-divider style="background-color: yellow; color: black;"> 
            MEN'S FASHION
            </ion-item-divider>
           <ion-item no-lines (click)="NavPullMenClothingPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Clothings</ion-item>
@@ -86,8 +88,10 @@
           <ion-item no-lines (click)="NavPullMenBagsPage()"><ion-icon name="briefcase" style="margin-right: 4px;"></ion-icon>Bags</ion-item>
           <ion-item no-lines (click)="NavPullMenWalletPage()"><ion-icon name="archive" style="margin-right: 4px;"></ion-icon>Wallets</ion-item>
       </ion-item-group>
+
+
       <ion-item-group>
-          <ion-item-divider color="light"> 
+          <ion-item-divider style="background-color: yellow; color: black;"> 
            WOMEN'S FASHION
            </ion-item-divider>
           <ion-item no-lines (click)="getWomenClothingPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Clothing</ion-item>
@@ -96,6 +100,30 @@
           <ion-item no-lines (click)="getWomenBagsPage()"><ion-icon name="briefcase" style="margin-right: 4px;"></ion-icon>Handbags & Wallets</ion-item>
           <ion-item no-lines (click)="getJewelryPage()"><ion-icon name="medal" style="margin-right: 4px;"></ion-icon>Jewelry</ion-item>
       </ion-item-group>
+
+
+      <ion-item-group>
+          <ion-item-divider style="background-color: yellow; color: black;"> 
+           KID'S FASHION
+           </ion-item-divider>
+          <ion-item no-lines (click)="goboykidClothingPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Boys Clothing</ion-item>
+          <ion-item no-lines (click)="gogirlkidClothingPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Girl's Clothing</ion-item>
+          <ion-item no-lines (click)="goboykidShoesPage()"><ion-icon name="paw" style="margin-right: 4px;"></ion-icon>Boy's Shoes & Footwear</ion-item>
+          <ion-item no-lines (click)="gogirlkidShoesPage()"><ion-icon name="paw" style="margin-right: 4px;"></ion-icon>Girl's Shoes & Footwear</ion-item>
+         <!-- <ion-item no-lines (click)="gokidWatchesPage()"><ion-icon name="watch" style="margin-right: 4px;"></ion-icon>Watch</ion-item>
+          <ion-item no-lines (click)="gokidBagsPage()"><ion-icon name="briefcase" style="margin-right: 4px;"></ion-icon>Handbags & Wallets</ion-item>
+          <ion-item no-lines (click)="gokidPage()"><ion-icon name="medal" style="margin-right: 4px;"></ion-icon>Jewelry</ion-item> -->
+      </ion-item-group>
+
+
+      <ion-item-group>
+          <ion-item-divider style="background-color: yellow; color: black;"> 
+           ACCOUNT
+           </ion-item-divider>
+          <ion-item no-lines (click)="getSignupPage()"><ion-icon name="person" style="margin-right: 4px;"></ion-icon>Signup</ion-item>
+         <!-- <ion-item no-lines (click)="getmycartPage()"><ion-icon name="paw" style="margin-right: 4px;"></ion-icon>My Cart</ion-item> -->
+      </ion-item-group>
+
     </ion-list>
   </ion-content>
 </ion-menu>
