@@ -4,8 +4,8 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-  <ion-navbar>
+<ion-header style="background-color: yellow; color: black;">
+  <ion-navbar color= 'navbarColor'>
     <ion-title style="background-color: yellow; color: black;">Customer Sign Up</ion-title>
   </ion-navbar>
 </ion-header>
@@ -54,19 +54,35 @@
       <ion-item>
         <ion-label>Country</ion-label>
         <ion-select [(ngModel)]="newUser.billing_address.country">
-          <ion-option value="India" selected="true">India</ion-option>
+          <ion-option value="Bahrain" selected="true">Bahrain</ion-option>
+          <ion-option value="Cyprus" selected="true">Cyprus</ion-option>
+          <ion-option value="Egypt" selected="true">Egypt</ion-option>
+          <ion-option value="Israel" selected="true">Israel</ion-option>
+          <ion-option value="Iran" selected="true">Iran</ion-option>
+          <ion-option value="Iraq" selected="true">Iraq</ion-option>
+          <ion-option value="Jordan" selected="true">Jordan</ion-option>
+          <ion-option value="Kuwait" selected="true">Kuwait</ion-option>
+          <ion-option value="Lebanon" selected="true">Lebanon</ion-option>
+          <ion-option value="Oman" selected="true">Oman</ion-option>
+          <ion-option value="Palestine" selected="true">Palestine</ion-option>
+          <ion-option value="Qatar" selected="true">Qatar</ion-option>
+          <ion-option value="Syria" selected="true">Syria</ion-option>
+          <ion-option value="Saudi" selected="true">Saudi Arabia</ion-option>
+          <ion-option value="Turkey" selected="true">Turkey</ion-option>
+          <ion-option value="UAE" selected="true">UAE</ion-option>
+          <ion-option value="Yemen" selected="true">Yemen</ion-option>
         </ion-select>
       </ion-item>
   
       <ion-item>
         <ion-label>State</ion-label>
-        <ion-select [(ngModel)]="newUser.billing_address.state">
-          <ion-option value="New Delhi" selected="true">New Delhi</ion-option>
-          <ion-option value="Uttar Pradesh">Uttar Pradesh</ion-option>
+       <!-- <ion-select >-->
+          <ion-textarea type="text" maxlength="50"  [(ngModel)]="newUser.billing_address.state"></ion-textarea>
+          <!--<ion-option value="Uttar Pradesh">Uttar Pradesh</ion-option>
           <ion-option value="Maharashtra">Maharashtra</ion-option>
           <ion-option value="Tamil Nadu">Tamil Nadu</ion-option>
-          <ion-option value="Madhya Pradesh">Madhya Pradesh</ion-option>
-        </ion-select>
+          <ion-option value="Madhya Pradesh">Madhya Pradesh</ion-option>-->
+       <!-- </ion-select>-->
       </ion-item>
   
       <ion-item>
@@ -86,7 +102,7 @@
   
       <ion-item>
         <ion-label>Same Shipping Details</ion-label>
-        <ion-checkbox (ionChange)="setBillingToShipping()"></ion-checkbox>
+        <ion-toggle (ionChange)="setBillingToShipping()"></ion-toggle>
       </ion-item>
   
   
@@ -104,20 +120,35 @@
   
         <ion-item *ngIf="!billing_shipping_same">
           <ion-label>Country</ion-label>
-          <ion-select [(ngModel)]="newUser.shipping_address.country">
-            <ion-option value="India" selected="true">India</ion-option>
+          <ion-select [(ngModel)]="newUser.shipping_address.country"> <ion-option value="Bahrain" selected="true">Bahrain</ion-option>
+            <ion-option value="Cyprus" selected="true">Cyprus</ion-option>
+            <ion-option value="Egypt" selected="true">Egypt</ion-option>
+            <ion-option value="Israel" selected="true">Israel</ion-option>
+            <ion-option value="Iran" selected="true">Iran</ion-option>
+            <ion-option value="Iraq" selected="true">Iraq</ion-option>
+            <ion-option value="Jordan" selected="true">Jordan</ion-option>
+            <ion-option value="Kuwait" selected="true">Kuwait</ion-option>
+            <ion-option value="Lebanon" selected="true">Lebanon</ion-option>
+            <ion-option value="Oman" selected="true">Oman</ion-option>
+            <ion-option value="Palestine" selected="true">Palestine</ion-option>
+            <ion-option value="Qatar" selected="true">Qatar</ion-option>
+            <ion-option value="Syria" selected="true">Syria</ion-option>
+            <ion-option value="Saudi" selected="true">Saudi Arabia</ion-option>
+            <ion-option value="Turkey" selected="true">Turkey</ion-option>
+            <ion-option value="UAE" selected="true">UAE</ion-option>
+            <ion-option value="Yemen" selected="true">Yemen</ion-option>
           </ion-select>
         </ion-item>
   
         <ion-item *ngIf="!billing_shipping_same">
           <ion-label>State</ion-label>
-          <ion-select [(ngModel)]="newUser.shipping_address.state">
-            <ion-option value="New Delhi" selected="true">New Delhi</ion-option>
-            <ion-option value="Uttar Pradesh">Uttar Pradesh</ion-option>
-            <ion-option value="Maharashtra">Maharashtra</ion-option>
-            <ion-option value="Tamil Nadu">Tamil Nadu</ion-option>
-            <ion-option value="Madhya Pradesh">Madhya Pradesh</ion-option>
-          </ion-select>
+          <!--<ion-select>-->
+          <ion-textarea type="text" maxlength="50"  [(ngModel)]="newUser.shipping_address.state"></ion-textarea>
+            <!--<ion-option value="Uttar Pradesh">Uttar Pradesh</ion-option>
+          <ion-option value="Maharashtra">Maharashtra</ion-option>
+          <ion-option value="Tamil Nadu">Tamil Nadu</ion-option>
+          <ion-option value="Madhya Pradesh">Madhya Pradesh</ion-option>-->
+       <!-- </ion-select>-->>
         </ion-item>
   
         <ion-item *ngIf="!billing_shipping_same">

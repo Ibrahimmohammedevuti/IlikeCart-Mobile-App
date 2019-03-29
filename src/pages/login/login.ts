@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController, AlertController, 
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
 import { SignupPage } from '../signup/signup';
+import { Checkout } from '../checkout/checkout';
 
 @IonicPage({})
 @Component({
@@ -22,7 +23,7 @@ export class Login {
   }
 
   login(){
-
+    console.log(this.username, this.password);
     this.http.get("http://ilikecart.com/api/auth/generate_auth_cookie/?insecure=cool&username=" + this.username + "&password=" + this.password)
     .subscribe( (res) => {
       console.log(res.json());
@@ -67,6 +68,15 @@ export class Login {
     });
 
   }
- 
+  openSignupPage(){
+  
+    this.navCtrl.push( SignupPage );
+    }
+
+   // Checkout(){
+  
+     // this.navCtrl.push( Checkout );
+     // }
+
 
 }

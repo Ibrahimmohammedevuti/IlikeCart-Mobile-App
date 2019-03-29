@@ -16,16 +16,20 @@ export class WoocommerceProvider {
   constructor() {
     this.Woocommerce = WC({
       url: "http://ilikecart.com",
-      consumerKey: "ck_5a8447fef9671f1a47e07b3171bc9fa54578942c",
-      consumerSecret: "cs_008af6bf98f73cfa43ac533d2b761d53cecfc9c4"
+      consumerKey: "ck_fa8919d8e87b2ee6801b1a5cba059d8854e1b3d5",
+      consumerSecret: "cs_05876ed864a25dc4af04d41281480bdd20b5df9b",
+      //verifySsl: false,
+      //queryStringAuth: true
     });
 
     this.WoocommerceV2 = WC({
       url: "http://ilikecart.com",
-      consumerKey: "ck_5a8447fef9671f1a47e07b3171bc9fa54578942c",
-      consumerSecret: "cs_008af6bf98f73cfa43ac533d2b761d53cecfc9c4",
+      consumerKey: "ck_fa8919d8e87b2ee6801b1a5cba059d8854e1b3d5",
+      consumerSecret: "cs_05876ed864a25dc4af04d41281480bdd20b5df9b",
       wpAPI: true,
-      version: "wc/v2"
+      version: "wc/v2",
+      verifySsl: false,
+      queryStringAuth: true
     });
   }
 

@@ -4,5 +4,5 @@
     "cordova": {}
   },
   "type": "ionic-angular",
-  "proxyUrl": "http://ilikecart.com"
+  "proxyUrl": "http://ilikecart.com/wc-api/v3"
 }

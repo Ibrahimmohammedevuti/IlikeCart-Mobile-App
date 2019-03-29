@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import * as WC from 'woocommerce-api';
+//import * as WC from 'woocommerce-api';
 // import { HomePage } from '../home/home';
 // import { Menu } from '../menu/menu';
 import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';

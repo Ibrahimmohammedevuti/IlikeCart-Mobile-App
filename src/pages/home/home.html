@@ -1,10 +1,10 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color= 'navbarColor'>
     <button ion-button menuToggle>
       <ion-icon name="menu" style="color: black;"></ion-icon>
     </button>
-    <ion-title style="background-color: yellow;"> <h2 style="color: black;"><img src="../../assets/images/logo.jpg">Home</h2></ion-title>
+    <ion-title style="background-color: yellow;"> <img src="../../assets/images/logo.png" /></ion-title>
   </ion-navbar>
 
   <ion-toolbar style="background-color: #d4af37; color: white;">
@@ -131,7 +131,9 @@
       <ion-row>
           <ion-col no-padding col-6 col-md-3 *ngFor="let product of moreProducts" text-wrap (click)="openProductPage(product)">
               <ion-card>
+                <ion-thumbnail>
                   <img [src]="product.featured_src" height="150px" width="30px"/>
+                  </ion-thumbnail>
                   <ion-card-content>
                       <ion-card-title no-padding >
                         {{ product.title.substr(0, 45) + '...' }}

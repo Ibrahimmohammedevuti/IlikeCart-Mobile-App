@@ -1,6 +1,6 @@
 <ion-header>
 
-    <ion-navbar>
+    <ion-navbar color= 'navbarColor'>
       <ion-title style="background-color: yellow; color: black;">Login</ion-title>
     </ion-navbar>
   
@@ -23,8 +23,12 @@
       </ion-item>
     </ion-list>
   
-    <button ion-button block color="danger" (click)="login()">Login</button>
-    <button ion-button clear block color="#ffce00" (click)="openSignup()">No Account? Sign Up Here</button>
+    <button ion-button block style="background-color: yellow; color: black;" (click)="login()">Login</button>
+    <button ion-button clear block color="yellow" (click)="openSignupPage()">No Account? Sign Up Here</button> 
+    <br/>
+    <br/>
+    <br/>
+   <!-- <button ion-button block style="background-color: yellow; color: black;" (click)="Checkout()">Guest Checkout</button>-->
   
   </ion-content>
   

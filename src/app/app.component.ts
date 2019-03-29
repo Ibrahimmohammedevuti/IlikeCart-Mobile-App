@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+//import { OneSignal } from "@ionic-native/onesignal";
 
 import { HomePage } from '../pages/home/home';
 //import { ListPage } from '../pages/list/list';
@@ -32,7 +33,7 @@ import { MobileAccessoriesPage } from '../pages/mobile-accessories/mobile-access
 import { OutdoorToysPage } from '../pages/outdoor-toys/outdoor-toys';
 import { PerfumePage } from '../pages/perfume/perfume';
 import { PlaystationPage } from '../pages/playstation/playstation'; 
-import { ProductDetails } from '../pages/product-details/product-details';
+//import { ProductDetails } from '../pages/product-details/product-details';
 import { RfToysPage } from '../pages/rf-toys/rf-toys';
 //import { SearchPage } from '../pages/search/search';
 import { SignupPage } from '../pages/signup/signup';
@@ -62,45 +63,13 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, ) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
       this.pages = [
       { title: 'Home', component: HomePage },
-      //{ title: 'List', component: ListPage },
-     /* { title: 'SmartPhones', component: SmartphonesPage },
-      { title: 'Tablets', component: TabletsPage },
-      { title: 'Accessories', component: MobileAccessoriesPage },
-      { title: 'Laptops', component: LaptopPage },
-      { title: 'Desktops', component: DesktopPage },
-      { title: 'Computer Accessories', component: ComputerAccessoriesPage },
-      { title: 'HomeTelevision & Video', component: TelevisionPage },
-      { title: 'Home Audio', component: HomeAudioPage },
-      { title: 'Camera & Photo', component: CameraPage },
-      { title: 'Appliances', component: HomeOfficeAppliancesPage },
-      { title: 'Home & Furniture', component: HomeFurniturePage },
-      { title: 'Home & Kitchen', component: HomeKitchenPage },
-      { title: 'Perfumes', component: PerfumePage },
-      { title: 'Cosmetics', component: CosmeticsPage },
-      { title: 'Hair Care', component: HairCarePage },
-      { title: 'Playstation', component: PlaystationPage },
-      { title: 'XBOX', component: XboxPage },
-      { title: 'Gaming PC', component: GamingPcPage },
-      { title: 'Outdoor Toys', component: OutdoorToysPage },
-      { title: 'Indoor Toys', component: IndoorToysPage },
-      { title: 'RF Toys', component: RfToysPage },
-      { title: 'Feeding Accessories', component: FeedingAccessoriesPage },
-      { title: 'Clothings', component: MenClothingPage },
-      { title: 'Shoes', component: MenShoesPage },
-      { title: 'Watches', component: MenWatchesPage },
-      { title: 'Bags', component: MenBagsPage },
-      { title: 'Wallets', component: MenWalletPage },
-      { title: 'Clothing', component: WomenClothingPage },
-      { title: 'Shoes & Footwear', component: WomenShoesPage },
-      { title: 'Watch', component: WomenWatchesPage },
-      { title: 'Handbags & Wallets', component: WomenBagsPage },
-      { title: 'Jewelry', component: JewelryPage },*/
+    
     ]; 
   } 
 
@@ -110,6 +79,21 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      
+     /* this.oneSignal.startInit('b019dab9-5078-40eb-a958-df477ef9b220', '706507838730');
+
+      this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
+
+      this.oneSignal.handleNotificationReceived().subscribe(() => {
+      //do something when notification is received
+       });
+
+      this.oneSignal.handleNotificationOpened().subscribe(() => {
+      //   // do something when a notification is opened
+      });
+
+      this.oneSignal.endInit();*/
+
     });
   }
 
@@ -119,202 +103,203 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
-//Smartphone navigation
-openSmartphonesPage() {
+    //Smartphone navigation
+    openSmartphonesPage() {
 
-  this.nav.push(SmartphonesPage);
+      this.nav.push(SmartphonesPage);
+    }
+    //Tablets navigation
+    openTabletsPage() {
+
+      this.nav.push(TabletsPage);
+    }
+    //mobile accessories
+    openMobileAccessoriesPage() {
+
+      this.nav.push(MobileAccessoriesPage);
+    }
+    //laptop
+    goToLaptopPage() {
+
+      this.nav.push(LaptopPage);
+    }
+    //desktop
+    goToDesktopPage() {
+
+      this.nav.push(DesktopPage);
+    }
+    //computer accessories
+    goToComputerAccessoriesPage() {
+
+      this.nav.push(ComputerAccessoriesPage);
+    }
+    //television
+    pushTelevisionPage() {
+
+      this.nav.push(TelevisionPage);
+    }
+    //home audio
+    pushHomeAudioPage() {
+
+      this.nav.push(HomeAudioPage);
+    }
+    //camera
+    pushCameraPage() {
+
+      this.nav.push(CameraPage);
+    }
+    //home appliance
+    tapHomeOfficeAppliancesPage() {
+
+      this.nav.push(HomeOfficeAppliancesPage);
+    }
+    //home furniture
+    tapHomeFurniturePage() {
+
+      this.nav.push(HomeFurniturePage);
+    }
+    //home kitchen
+    tapHomeKitchenPage() {
+
+      this.nav.push(HomeKitchenPage);
+    }
+    //perfume
+    pullPerfumePage() {
+
+      this.nav.push(PerfumePage);
+    }
+    // cosmetics
+    pullCosmeticsPage() {
+
+      this.nav.push(CosmeticsPage);
+    }
+    //hair care
+    pullHairCarePage() {
+
+      this.nav.push(HairCarePage);
+    }
+    
+    popPlaystationPage() {
+
+      this.nav.push(PlaystationPage);
+    }
+    //xbox
+    popXboxPage() {
+
+      this.nav.push(XboxPage);
+    }
+    //gaming pc
+    popGamingPcPage() {
+
+      this.nav.push(GamingPcPage);
+    }
+    //outdoor toys
+    PushOutdoorToysPage() {
+
+      this.nav.push(OutdoorToysPage);
+    }
+    //indoor toys
+    PushIndoorToysPage() {
+
+      this.nav.push(IndoorToysPage);
+    }
+    //Rf toys
+    PushRfToysPage() {
+
+      this.nav.push(RfToysPage);
+    }
+    //feeding accessories
+    PushFeedingAccessoriesPage() {
+
+      this.nav.push(FeedingAccessoriesPage);
+    }
+    //men clothings
+    NavPullMenClothingPage() {
+
+      this.nav.push(MenClothingPage);
+      }
+      //men shoes
+      NavPullMenShoesPage() {
+
+        this.nav.push(MenShoesPage);
+      }
+      //men watches
+      NavPullMenWatchesPage() {
+
+        this.nav.push(MenWatchesPage);
+      }
+      // men bags
+      NavPullMenBagsPage() {
+
+        this.nav.push(MenBagsPage);
+      }
+      //men wallets
+      NavPullMenWalletPage() {
+
+        this.nav.push(MenWalletPage);
+      }
+      // women clothing
+      getWomenClothingPage() {
+
+        this.nav.push(WomenClothingPage);
+      }
+      //women shoes
+      getWomenShoesPage() {
+
+        this.nav.push(WomenShoesPage);
+      
+      //women bags
+      /*getWomenHandBagsPage() {
+
+        this.nav.push(WomenBagsPage);
+      }
+      //women watches
+      getWomenWatchesPage() {
+
+        this.nav.push(WomenWatchesPage);
+      }
+      //women jewelry
+      getJewelryPage() {
+
+        this.nav.push(JewelryPage);
+      }
+
+      goboykidClothingPage() {
+
+        this.nav.push( BoyClothing );
+      }
+
+      gogirlkidClothingPage() {
+
+        this.nav.push(GirlClothing);
+      }
+
+      goboykidShoesPage() {
+
+        this.nav.push(BoyShoes);
+      }
+
+
+      gogirlkidShoesPage() {
+
+        //this.nav.push(GirlShoes);
+      //}*/
+
+
+      //getSignupPage() {
+
+        //this.nav.push(SignupPage);
+      //}
+
+      //NavPushBabyBoyClothing() {
+
+        //this.nav.push(BabyBoyClothing);
+     // }
+
+      
+      //PushBabyGirlPage() {
+
+       // this.nav.push(BabyGirlClothing);
+     // }
  }
-//Tablets navigation
- openTabletsPage() {
-
-  this.nav.push(TabletsPage);
- }
- //mobile accessories
- openMobileAccessoriesPage() {
-
-  this.nav.push(MobileAccessoriesPage);
- }
- //laptop
- goToLaptopPage() {
-
-  this.nav.push(LaptopPage);
- }
- //desktop
- goToDesktopPage() {
-
-  this.nav.push(DesktopPage);
- }
- //computer accessories
- goToComputerAccessoriesPage() {
-
-  this.nav.push(ComputerAccessoriesPage);
- }
- //television
- pushTelevisionPage() {
-
-  this.nav.push(TelevisionPage);
- }
- //home audio
- pushHomeAudioPage() {
-
-  this.nav.push(HomeAudioPage);
- }
- //camera
- pushCameraPage() {
-
-  this.nav.push(CameraPage);
- }
- //home appliance
- tapHomeOfficeAppliancesPage() {
-
-  this.nav.push(HomeOfficeAppliancesPage);
- }
- //home furniture
- tapHomeFurniturePage() {
-
-  this.nav.push(HomeFurniturePage);
- }
- //home kitchen
- tapHomeKitchenPage() {
-
-  this.nav.push(HomeKitchenPage);
- }
- //perfume
- pullPerfumePage() {
-
-  this.nav.push(PerfumePage);
- }
- // cosmetics
- pullCosmeticsPage() {
-
-  this.nav.push(CosmeticsPage);
- }
- //hair care
- pullHairCarePage() {
-
-  this.nav.push(HairCarePage);
- }
- 
- popPlaystationPage() {
-
-  this.nav.push(PlaystationPage);
- }
- //xbox
- popXboxPage() {
-
-  this.nav.push(XboxPage);
- }
- //gaming pc
- popGamingPcPage() {
-
-  this.nav.push(GamingPcPage);
- }
- //outdoor toys
- NavPushOutdoorToysPage() {
-
-  this.nav.push(OutdoorToysPage);
- }
- //indoor toys
- NavPushIndoorToysPage() {
-
-  this.nav.push(IndoorToysPage);
- }
- //Rf toys
- NavPushRfToysPage() {
-
-  this.nav.push(RfToysPage);
- }
- //feeding accessories
- NavPushFeedingAccessoriesPage() {
-
-  this.nav.push(FeedingAccessoriesPage);
- }
- //men clothings
- NavPullMenClothingPage() {
-
-    this.nav.push(MenClothingPage);
-   }
-   //men shoes
-   NavPullMenShoesPage() {
-
-    this.nav.push(MenShoesPage);
-   }
-   //men watches
-   NavPullMenWatchesPage() {
-
-    this.nav.push(MenWatchesPage);
-   }
-   // men bags
-   NavPullMenBagsPage() {
-
-    this.nav.push(MenBagsPage);
-   }
-   //men wallets
-   NavPullMenWalletPage() {
-
-    this.nav.push(MenWalletPage);
-   }
-   // women clothing
-   getWomenClothingPage() {
-
-    this.nav.push(WomenClothingPage);
-   }
-   //women shoes
-   getWomenShoesPage() {
-
-    this.nav.push(WomenShoesPage);
-   }
-   //women bags
-   getnWomenBagsPage() {
-
-    this.nav.push(WomenBagsPage);
-   }
-   //women watches
-   getWomenWatchesPage() {
-
-    this.nav.push(WomenWatchesPage);
-   }
-   //women jewelry
-   getJewelryPage() {
-
-    this.nav.push(JewelryPage);
-   }
-
-   goboykidClothingPage() {
-
-    this.nav.push( BoyClothing );
-   }
-
-   gogirlkidClothingPage() {
-
-    this.nav.push(GirlClothing);
-   }
-
-   goboykidShoesPage() {
-
-    this.nav.push(BoyShoes);
-   }
-
-
-   gogirlkidShoesPage() {
-
-    this.nav.push(GirlShoes);
-   }
-
-
-   getSignupPage() {
-
-    this.nav.push(SignupPage);
-   }
-
-   NavPushBabyBoyPage() {
-
-    this.nav.push(BabyBoyClothing);
-   }
-
-   
-   NavPushBabyGirlPage() {
-
-    this.nav.push( BabyGirlClothing );
-   }
 }

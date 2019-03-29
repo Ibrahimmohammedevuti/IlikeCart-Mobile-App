@@ -7,7 +7,7 @@
 
   <ion-content class="card-background-page">
       <ion-card>
-          <img src="./assets/images/rock.png" />
+          <img src="./assets/images/32.png" />
           <div class="card-title">iLikeCart</div>
           <div class="card-subtitle">Keep Shopping</div>
         </ion-card>
@@ -71,12 +71,12 @@
           <ion-item-divider style="background-color: yellow; color: black"> 
             BABY & TOYS
           </ion-item-divider>
-          <ion-item no-lines (click)="NavPushbabyboyPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Boy Clothing</ion-item>
-          <ion-item no-lines (click)="NavPushbabygirlPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Girl Clothing</ion-item>
-          <ion-item no-lines (click)="NavPushOutdoorToysPage()"><ion-icon name="baseball" style="margin-right: 4px;"></ion-icon>Outdoor Toys</ion-item>
-          <ion-item no-lines (click)="NavPushIndoorToysPage()"><ion-icon name="logo-tux" style="margin-right: 4px;"></ion-icon>Indoor Toys</ion-item>
-          <ion-item no-lines (click)="NavPushRfToysPage()">RF Toys</ion-item>
-          <ion-item no-lines (click)="NavPushFeedingAccessoriesPage()"><ion-icon name="restaurant" style="margin-right: 4px;"></ion-icon>Feeding Accessories</ion-item>
+          <ion-item no-lines (click)="NavPushBabyBoyClothing()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Boy Clothing</ion-item>
+          <ion-item no-lines (click)="PushBabyGirlPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Girl Clothing</ion-item>
+          <ion-item no-lines (click)="PushOutdoorToysPage()"><ion-icon name="baseball" style="margin-right: 4px;"></ion-icon>Outdoor Toys</ion-item>
+          <ion-item no-lines (click)="PushIndoorToysPage()"><ion-icon name="logo-tux" style="margin-right: 4px;"></ion-icon>Indoor Toys</ion-item>
+          <ion-item no-lines (click)="PushRfToysPage()">RF Toys</ion-item>
+          <ion-item no-lines (click)="PushFeedingAccessoriesPage()"><ion-icon name="restaurant" style="margin-right: 4px;"></ion-icon>Feeding Accessories</ion-item>
       </ion-item-group>
       <ion-item-group>
           <ion-item-divider style="background-color: yellow; color: black;"> 
@@ -97,7 +97,7 @@
           <ion-item no-lines (click)="getWomenClothingPage()"><ion-icon name="shirt" style="margin-right: 4px;"></ion-icon>Clothing</ion-item>
           <ion-item no-lines (click)="getWomenShoesPage()"><ion-icon name="paw" style="margin-right: 4px;"></ion-icon>Shoes & Footwear</ion-item>
           <ion-item no-lines (click)="getWomenWatchesPage()"><ion-icon name="watch" style="margin-right: 4px;"></ion-icon>Watch</ion-item>
-          <ion-item no-lines (click)="getWomenBagsPage()"><ion-icon name="briefcase" style="margin-right: 4px;"></ion-icon>Handbags & Wallets</ion-item>
+          <ion-item no-lines (click)="getWomenHandBagsPage(Bags)"><ion-icon name="briefcase" style="margin-right: 4px;"></ion-icon>Handbags & Wallets</ion-item>
           <ion-item no-lines (click)="getJewelryPage()"><ion-icon name="medal" style="margin-right: 4px;"></ion-icon>Jewelry</ion-item>
       </ion-item-group>
 
@@ -121,7 +121,7 @@
            ACCOUNT
            </ion-item-divider>
           <ion-item no-lines (click)="getSignupPage()"><ion-icon name="person" style="margin-right: 4px;"></ion-icon>Signup</ion-item>
-         <!-- <ion-item no-lines (click)="getmycartPage()"><ion-icon name="paw" style="margin-right: 4px;"></ion-icon>My Cart</ion-item> -->
+          <!--<ion-item no-lines (click)="getsignupPage()"><ion-icon name="person" style="margin-right: 4px;"></ion-icon>My Cart</ion-item> -->
       </ion-item-group>
 
     </ion-list>
